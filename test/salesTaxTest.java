@@ -15,4 +15,14 @@ public class salesTaxTest {
         assertEquals(expectedValue, actualValue ,0.0);
     }
 
+    @Test
+    public void shouldKnowToCalculateTheSalesTaxForMoreThanOneImportedGoods() {
+        SalesTaxCalculator calculator = new SalesTaxCalculator();
+        double actualValue = calculator.calculateImportedSalesTax("2","10.00");
+
+        double expectedValue = 21.00;
+
+        assertEquals(expectedValue, actualValue, 0.0);
+    }
+
 }
