@@ -7,9 +7,9 @@ public class Dispatcher {
     }
     public double dispatch(String input) {
         double salesTax = 0;
-        String formattedInput[] = input.split(" ");
+        String formattedInput[ ] = input.split(" ");
         if(formattedInput[1].equals("imported")) {
-            salesTax = calculator.calculateImportedSalesTax(formattedInput[2], formattedInput[formattedInput.length - 1]);
+            salesTax = calculator.calculateImportedSalesTax(formattedInput[0], formattedInput[formattedInput.length - 1]);
         }
         return salesTax;
     }
