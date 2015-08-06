@@ -27,4 +27,14 @@ public class salesTaxTest {
         assertEquals(expectedValue, actualValue, 0.0);
     }
 
+    @Test
+    public void shouldKnowToCalculateTheSalesTaxForOneImportedGoodsOfDifferentKind() {
+        SalesTaxCalculator calculator = new SalesTaxCalculator();
+        double actualValue = calculator.calculateImportedSalesTaxForNonExemtedGoods("1","47.50");
+
+        double expectedValue = 54.625;
+
+        assertEquals(expectedValue, actualValue ,0.0);
+    }
+
 }
